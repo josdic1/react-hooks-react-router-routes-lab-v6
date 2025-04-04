@@ -10,13 +10,11 @@ function Home() {
     fetchMovies()
   },[])
 
-  const onMovieClick = (movie) => {
-    console.log(movie)
-  }
+
 
 
   const movieData = movies.map(m => (
-    <MovieCard key={m.id} movie={m} onMovieClick={onMovieClick}/>
+    <MovieCard key={m.id} movie={m}/>
   ))
 
 
@@ -31,7 +29,7 @@ function Home() {
       setMovies(data)
     }catch (error) {console.error("❌ Caught error:", error);}
   }
-  
+
   return (
     <>
       <header>
