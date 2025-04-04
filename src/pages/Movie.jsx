@@ -1,16 +1,18 @@
 import { useEffect, useState } from "react";
+import NavBar from "../components/NavBar";
+import MovieCard from "../components/MovieCard";
 
 function Movie() {
   return (
     <>
       <header>
-        {/* What component should go here? */}
+      <NavBar />
       </header>
       <main>
-        {/* Movie info here! */}
+        <MovieCard />
       </main>
     </>
   );
-};
+}; 
 
 export default Movie;

@@ -1,13 +1,16 @@
 import {Link} from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
-function MovieCard({title}) {
-  
+
+function MovieCard({movie, onMovieClick}) {
+  const { id } = useParams();
+
   return (
-    <article>
-        <h2>{title}</h2>
-        {/* What should go here? */}
+    <article onClick={() => onMovieClick(movie)}>
+        <h2>{movie.title}</h2>
+        <Link to={`/movie/${id}`}/>
     </article>
-  );
-};
+  )
+  }
 
 export default MovieCard;
